@@ -8,6 +8,8 @@
  * 2. program, ki sesteje vse kvadrate med 1 in n
  * 3. program, ki izracuna produkt ne-nicelnih stevk stevila n
  * 4. program, ki preveri ali je dano naravno stevilo prastevilo
+ * 
+ * Domaca naloga : nalogi 2 in 4
  */
 int main(int argc, char **argv)
 {
