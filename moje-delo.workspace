@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="moje-delo" Database="" Version="10.0.0">
+  <Project Name="test" Path="test/test.project" Active="No"/>
+  <Project Name="vaja1-1" Path="vaja1-1/vaja1-1.project" Active="No"/>
+  <Project Name="vaja1-3" Path="vaja1-3/vaja1-3.project" Active="No"/>
+  <Project Name="vaja1-4" Path="vaja1-4/vaja1-4.project" Active="No"/>
+  <Project Name="vaja1-5" Path="vaja1-5/vaja1-5.project" Active="No"/>
+  <Project Name="vaja1-6" Path="vaja1-6/vaja1-6.project" Active="No"/>
+  <Project Name="test1" Path="test1/test1.project" Active="No"/>
+  <Project Name="vaja1-2" Path="vaja1-2/vaja1-2.project" Active="No"/>
+  <Project Name="vaja1-dn" Path="vaja1-dn/vaja1-dn.project" Active="No"/>
+  <Project Name="vaja2-1" Path="vaja2-1/vaja2-1.project" Active="Yes"/>
+  <Project Name="vaja2-2" Path="vaja2-2/vaja2-2.project" Active="No"/>
+  <Project Name="vaja2-3" Path="vaja2-3/vaja2-3.project" Active="No"/>
+  <Project Name="vaja2-4" Path="vaja2-4/vaja2-4.project" Active="No"/>
+  <Project Name="vaja2-5" Path="vaja2-5/vaja2-5.project" Active="No"/>
+  <Project Name="vaja2-6" Path="vaja2-6/vaja2-6.project" Active="No"/>
+  <Project Name="vaja2-7" Path="vaja2-7/vaja2-7.project" Active="No"/>
+  <Project Name="vaja2-dn" Path="vaja2-dn/vaja2-dn.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="test" ConfigName="Debug"/>
+      <Project Name="vaja1-1" ConfigName="Debug"/>
+      <Project Name="vaja1-3" ConfigName="Debug"/>
+      <Project Name="vaja1-4" ConfigName="Debug"/>
+      <Project Name="vaja1-5" ConfigName="Debug"/>
+      <Project Name="vaja1-6" ConfigName="Debug"/>
+      <Project Name="vaje10-naloga2" ConfigName="Debug"/>
+      <Project Name="test1" ConfigName="Debug"/>
+      <Project Name="vaja1-2" ConfigName="Debug"/>
+      <Project Name="vaja1-dn" ConfigName="Debug"/>
+      <Project Name="vaja2-1" ConfigName="Debug"/>
+      <Project Name="vaja2-2" ConfigName="Debug"/>
+      <Project Name="vaja2-3" ConfigName="Debug"/>
+      <Project Name="vaja2-4" ConfigName="Debug"/>
+      <Project Name="vaja2-5" ConfigName="Debug"/>
+      <Project Name="vaja2-6" ConfigName="Debug"/>
+      <Project Name="vaja2-7" ConfigName="Debug"/>
+      <Project Name="vaja2-dn" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="test" ConfigName="Release"/>
+      <Project Name="vaja1-1" ConfigName="Release"/>
+      <Project Name="vaja1-3" ConfigName="Release"/>
+      <Project Name="vaja1-4" ConfigName="Release"/>
+      <Project Name="vaja1-5" ConfigName="Release"/>
+      <Project Name="vaja1-6" ConfigName="Release"/>
+      <Project Name="vaje10-naloga2" ConfigName="Release"/>
+      <Project Name="test1" ConfigName="Release"/>
+      <Project Name="vaja1-2" ConfigName="Release"/>
+      <Project Name="vaja1-dn" ConfigName="Release"/>
+      <Project Name="vaja2-1" ConfigName="Release"/>
+      <Project Name="vaja2-2" ConfigName="Release"/>
+      <Project Name="vaja2-3" ConfigName="Release"/>
+      <Project Name="vaja2-4" ConfigName="Release"/>
+      <Project Name="vaja2-5" ConfigName="Release"/>
+      <Project Name="vaja2-6" ConfigName="Release"/>
+      <Project Name="vaja2-7" ConfigName="Release"/>
+      <Project Name="vaja2-dn" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
