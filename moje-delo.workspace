@@ -21,7 +21,16 @@
   <Project Name="vaja3-1" Path="vaja3-1/vaja3-1.project" Active="No"/>
   <Project Name="vaja3-2" Path="vaja3-2/vaja3-2.project" Active="No"/>
   <Project Name="vaja3-3" Path="vaja3-3/vaja3-3.project" Active="No"/>
-  <Project Name="vaja3-4" Path="vaja3-4/vaja3-4.project" Active="Yes"/>
+  <Project Name="vaja3-4" Path="vaja3-4/vaja3-4.project" Active="No"/>
+  <Project Name="vaja4-1" Path="vaja4-1/vaja4-1.project" Active="No"/>
+  <Project Name="vaja4-2" Path="vaja4-2/vaja4-2.project" Active="No"/>
+  <Project Name="vaja4-3" Path="vaja4-3/vaja4-3.project" Active="No"/>
+  <Project Name="vaja4-4" Path="vaja4-4/vaja4-4.project" Active="No"/>
+  <Project Name="vaja4-5" Path="vaja4-5/vaja4-5.project" Active="No"/>
+  <Project Name="vaja4-6" Path="vaja4-6/vaja4-6.project" Active="No"/>
+  <Project Name="vaja4-7" Path="vaja4-7/vaja4-7.project" Active="No"/>
+  <Project Name="vaja4-8" Path="vaja4-8/vaja4-8.project" Active="Yes"/>
+  <Project Name="vaja4-dn" Path="vaja4-dn/vaja4-dn.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -48,6 +57,15 @@
       <Project Name="vaja3-2" ConfigName="Debug"/>
       <Project Name="vaja3-3" ConfigName="Debug"/>
       <Project Name="vaja3-4" ConfigName="Debug"/>
+      <Project Name="vaja4-1" ConfigName="Debug"/>
+      <Project Name="vaja4-2" ConfigName="Debug"/>
+      <Project Name="vaja4-3" ConfigName="Debug"/>
+      <Project Name="vaja4-4" ConfigName="Debug"/>
+      <Project Name="vaja4-5" ConfigName="Debug"/>
+      <Project Name="vaja4-6" ConfigName="Debug"/>
+      <Project Name="vaja4-7" ConfigName="Debug"/>
+      <Project Name="vaja4-8" ConfigName="Debug"/>
+      <Project Name="vaja4-dn" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -74,6 +92,15 @@
       <Project Name="vaja3-2" ConfigName="Release"/>
       <Project Name="vaja3-3" ConfigName="Release"/>
       <Project Name="vaja3-4" ConfigName="Release"/>
+      <Project Name="vaja4-1" ConfigName="Release"/>
+      <Project Name="vaja4-2" ConfigName="Release"/>
+      <Project Name="vaja4-3" ConfigName="Release"/>
+      <Project Name="vaja4-4" ConfigName="Release"/>
+      <Project Name="vaja4-5" ConfigName="Release"/>
+      <Project Name="vaja4-6" ConfigName="Release"/>
+      <Project Name="vaja4-7" ConfigName="Release"/>
+      <Project Name="vaja4-8" ConfigName="Release"/>
+      <Project Name="vaja4-dn" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
