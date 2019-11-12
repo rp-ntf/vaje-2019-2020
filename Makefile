@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ vaja3-dn-nal4 - Debug ]----------"
-	@cd "vaja3-dn-nal4" && "$(MAKE)" -f  "vaja3-dn-nal4.mk"
+	@echo "----------Building project:[ vaja5-9 - Debug ]----------"
+	@cd "vaja5-9" && "$(MAKE)" -f  "vaja5-9.mk"
 clean:
-	@echo "----------Cleaning project:[ vaja3-dn-nal4 - Debug ]----------"
-	@cd "vaja3-dn-nal4" && "$(MAKE)" -f  "vaja3-dn-nal4.mk" clean
+	@echo "----------Cleaning project:[ vaja5-9 - Debug ]----------"
+	@cd "vaja5-9" && "$(MAKE)" -f  "vaja5-9.mk" clean
