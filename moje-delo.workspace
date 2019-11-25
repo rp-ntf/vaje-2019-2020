@@ -50,7 +50,9 @@
   <Project Name="vaje6-5" Path="vaje6-5/vaje6-5.project" Active="No"/>
   <Project Name="vaje6-6" Path="vaje6-6/vaje6-6.project" Active="No"/>
   <Project Name="vaja5-dn-1" Path="vaja5-dn-1/vaja5-dn-1.project"/>
-  <Project Name="vaja5-dn-2" Path="vaja5-dn-2/vaja5-dn-2.project" Active="Yes"/>
+  <Project Name="vaja5-dn-2" Path="vaja5-dn-2/vaja5-dn-2.project" Active="No"/>
+  <Project Name="vaje6-dn-1" Path="vaje6-dn-1/vaje6-dn-1.project" Active="No"/>
+  <Project Name="vaje6-dn-2" Path="vaje6-dn-2/vaje6-dn-2.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -106,6 +108,8 @@
       <Project Name="vaje6-6" ConfigName="Debug"/>
       <Project Name="vaja5-dn-1" ConfigName="Debug"/>
       <Project Name="vaja5-dn-2" ConfigName="Debug"/>
+      <Project Name="vaje6-dn-1" ConfigName="Debug"/>
+      <Project Name="vaje6-dn-2" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -161,6 +165,8 @@
       <Project Name="vaje6-6" ConfigName="Release"/>
       <Project Name="vaja5-dn-1" ConfigName="Release"/>
       <Project Name="vaja5-dn-2" ConfigName="Release"/>
+      <Project Name="vaje6-dn-1" ConfigName="Release"/>
+      <Project Name="vaje6-dn-2" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
