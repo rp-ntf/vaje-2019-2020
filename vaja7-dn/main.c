@@ -9,7 +9,6 @@
  *        n letih, če na začetku vsakega leta vplača na račun y EUR. Obresti se obračunavajo
  *        letno. Podatke o obrestni meri in obroku naj vpiše uporabnik. */
 
-
 #include <stdio.h>
 #include <math.h>
 
@@ -20,10 +19,10 @@ int kvadratna_enacba(
 	// Vrenmo korene v koreni[]
 	// vremo stevilo realnih nicel
 	float D = b*b - 4*a*c;
-	if( D < 0 )// Ni resitev
+	if( D < 0 )// Ni realnih resitev
 	{
 		printf("Ni resitev kvadratne enacbe\n");
-		return 0;
+		return 1;
 	}
 	else
 	{
@@ -61,8 +60,9 @@ int main(int argc, char **argv)
 {
 	float koreni[2];
 	kvadratna_enacba( 1, -5, 6, koreni );
-	
-	printf("Vsota kvadratov prvih 10 stevil je %d\n", vsota_kvadratov(10) );
+	// (x-2)*(x-3) = x**2 -5x + 6 
+	printf("Vsota kvadratov prvih 10 stevil je %d\n",
+        vsota_kvadratov(10) );
 	
 	float obrok, obresti;
 	int st_let;

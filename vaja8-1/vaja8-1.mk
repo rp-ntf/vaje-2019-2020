@@ -3,10 +3,10 @@
 ## any manual changes will be erased      
 ##
 ## Debug
-ProjectName            :=vaja7-dn
+ProjectName            :=vaja8-1
 ConfigurationName      :=Debug
 WorkspacePath          := "/home/matjaz/doktorat/workspace/vaje-rp/vaje-2019-2020"
-ProjectPath            := "/home/matjaz/doktorat/workspace/vaje-rp/vaje-2019-2020/vaja7-dn"
+ProjectPath            := "/home/matjaz/doktorat/workspace/vaje-rp/vaje-2019-2020/vaja8-1"
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
@@ -32,7 +32,7 @@ Preprocessors          :=
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E
-ObjectsFileList        :="vaja7-dn.txt"
+ObjectsFileList        :="vaja8-1.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=mkdir -p
 LinkOptions            :=  
@@ -92,7 +92,7 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/main.c$(ObjectSuffix): main.c $(IntermediateDirectory)/main.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "/home/matjaz/doktorat/workspace/vaje-rp/vaje-2019-2020/vaja7-dn/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
+	$(CC) $(SourceSwitch) "/home/matjaz/doktorat/workspace/vaje-rp/vaje-2019-2020/vaja8-1/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.c$(DependSuffix): main.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.c$(ObjectSuffix) -MF$(IntermediateDirectory)/main.c$(DependSuffix) -MM "main.c"
 
