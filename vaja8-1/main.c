@@ -3,7 +3,7 @@
 // ponavljanje funkcije
 // (kaj vrne = void) (ime funkcije = izpisi_tabelo)
 // sledijo tipi argumentov in imena v ()
-void izpisi_tabelo( int n, int tabela[] )
+void izpisi_tabelo_int( int n, int tabela[] )
 {
     int vsota = 0; // Lokalna spremenljivka
     for( int i=0; i<n; ++i ) {
@@ -30,11 +30,16 @@ void izpisi_tabelo_float( int n, float tabela[] )
 void dodaj_izvor( int n, float tabela[] )
 {
     tabela[n/2] = tabela[n/2] + 1.0;
+
     // tabela[n/2] += 1.0;
     // Dodatna naloga (po 7. nalogi): 
     // na 1/2 tabele dodamo 1.0,
     // na 3/4 tabele dodamo 1.0/3.0
     // na 1/5 tabele dodamo 1.0/7.0
+    /*
+    tabela[3*n/4] += 1.0/3.0;
+    tabela[n/5] += 1.0/7.0;
+     * */
 }
 
 void nastavi_robne_pogoje( int n, float tabela[] )
@@ -70,7 +75,8 @@ float razlika_tabel( int n,
 void kopiraj_tabelo( int n,
                      float tabela1[], float tabela2[] )
 {
-
+    for( int i=0; i<n; ++i )
+        tabela2[i] = tabela1[i];
 }
 
 /*
@@ -102,6 +108,20 @@ void kopiraj_tabelo( int n,
  * - tabelo 2 nastavi na povprecje 3 clenov iz tabele1
  * - tabeli 2 nastavi robne pogoje
  * - tabeli 2 doda izvor na sredino
+ * - izracuna razliko tabel 
+ * - skopira tabelo 2 v tabelo 1
+ * in vse v zanki ponavlja 10000 korakov
+ * 
+ * Domaca naloga :
+ * funkcijo povprecje spremenite tako,
+ * da sprejme se en parameter (float koef)
+ * in namesto nastavljanja tabele2 na povprecje,
+ * nastavi tabelo2 na vrednost
+ * tabela2[i] = 1/3 (tab1[i-1]+tab1[i]+tab1[i+1]) * koef
+ *      + (1-koef) * tab1;
+ * ter zazenite simulacijo iz naloge 7 z nekaj razlicnimi
+ * vrednostmi koef = 0.01, 0.1, 0.5, 1.0
+ * in izrisite rezultate koncnega profila vrednosti v tabeli
  */
 
 int main(int argc, char **argv)
@@ -113,7 +133,7 @@ int main(int argc, char **argv)
         1, 2, 3, 4, 5, 6, 7, 8, 9
     };
 
-    float tabela2[9];
+    
 
     izpisi_tabelo_float(9,tabela_float);
 
@@ -127,16 +147,40 @@ int main(int argc, char **argv)
     printf("Tabela po nastavljenih robnih pogojih\n");
     izpisi_tabelo_float(9,tabela_float);
 
-    povprecje(9,tabela_float, tabela2 );
-    nastavi_robne_pogoje(9,tabela2);
+    float tabela2_float[9];
+    povprecje(9,tabela_float, tabela2_float );
+    nastavi_robne_pogoje(9,tabela2_float);
 
 
     printf("Tabela po povprecenju, in robn. pog. \n");
-    izpisi_tabelo_float(9,tabela2);
+    izpisi_tabelo_float(9,tabela2_float);
     
-    float razlika = razlika_tabel(9,tabela_float,tabela2);
+    float razlika = razlika_tabel(9,tabela_float,tabela2_float);
     
     printf("Razlika tabel = %f\n", razlika);
+    
+    // Naloga 7
+    float tabela1[15], tabela2[15];
+    float razlika12;
+    for( int i=0; i<15; ++i )
+        tabela1[i] = 0.0;
+    
+    izpisi_tabelo_float(15,tabela1);
+
+    for( int i=0; i<10000; ++i )
+    {
+        povprecje(15,tabela1,tabela2);
+
+        nastavi_robne_pogoje(15,tabela2);
+        
+        dodaj_izvor(15,tabela2);
+
+        razlika12 = razlika_tabel(15,tabela1,tabela2);
+        printf("korak %d, razlika %f\n", i, razlika12);
+        // Skopiramo tabelo 2 nazaj na tabelo 1
+        kopiraj_tabelo(15,tabela2,tabela1);
+    }
+    izpisi_tabelo_float(15,tabela1);
 
     return 0;
 }
