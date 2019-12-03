@@ -31,6 +31,10 @@ void dodaj_izvor( int n, float tabela[] )
 {
     tabela[n/2] = tabela[n/2] + 1.0;
     // tabela[n/2] += 1.0;
+    // Dodatna naloga (po 7. nalogi): 
+    // na 1/2 tabele dodamo 1.0,
+    // na 3/4 tabele dodamo 1.0/3.0
+    // na 1/5 tabele dodamo 1.0/7.0
 }
 
 void nastavi_robne_pogoje( int n, float tabela[] )
