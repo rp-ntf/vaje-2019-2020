@@ -37,16 +37,30 @@ void dodaj_izvor( int n, float tabela[] )
 
 void nastavi_robne_pogoje( int n, float tabela[] )
 {
-    
+    // tabela[0] ... tabela[n-1]
+    tabela[0] = 0;
+    tabela[n-1] = 0;
 }
 
 void povprecje( int n, 
     float tabela1[], float tabela2[] )
 {
-    
+    for( int i=1; i<n-1; ++i )
+    {
+        tabela2[i] = 1.0/3.0 *
+            ( tabela1[i-1] +
+                tabela1[i] + 
+                tabela1[i+1] );
+    }
 }
 
-void razlika_tabel( int n,
+float razlika_tabel( int n,
+    float tabela1[], float tabela2[] )
+{
+
+}
+
+void kopiraj_tabelo( int n,
     float tabela1[], float tabela2[] )
 {
     
@@ -69,6 +83,22 @@ void razlika_tabel( int n,
  * 5. Napisite funkcijo (razlika tabel),
  * ki izracuna povprecen kvdrat razlike clenov dveh tabel
  * A in B tabeli: funkcija vrne vsoto (A[i]-B[i])^2
+ * 6. Napisite funkcijo (kopiraj_tabelo),
+ * ki skopira vse elemente tabela1 v elemente tabela2
+ * (obe tabeli sta dolzine n, tipa float)
+ * 
+ * Naloga 7:
+ * Napisite program, 
+ * ki tabelo1 (15 elementov, v programu sta dve tabeli)
+ * najprej inicializira
+ * na samo 0, potem pa v zanki ponavlja naslednje:
+ * - tabelo 2 nastavi na povprecje 3 clenov iz tabele1
+ * - tabeli 2 nastavi robne pogoje
+ * - tabeli 2 doda izvor na sredino
+ * - izracuna razliko obeh tabel in jo izpise
+ * ( izpise "korak = %010d, razlika = %f" )
+ * - skopiramo tabelo2 v tabelo1
+ * in to ponovi 10000 krat
  */
 
 int main(int argc, char **argv)
@@ -78,9 +108,27 @@ int main(int argc, char **argv)
     int n = 5;
     float tabela_float[9] = { 
         1, 2, 3, 4, 5, 6, 7, 8, 9 };
+    
+    float tabela2[9];
+    
     izpisi_tabelo_float(9,tabela_float);
+    
     dodaj_izvor(9,tabela_float);
+    
+    printf("Tabela po dodanem izvoru\n");
     izpisi_tabelo_float(9,tabela_float);
+    
+    nastavi_robne_pogoje(9,tabela_float);
+    
+    printf("Tabela po nastavljenih robnih pogojih\n");
+    izpisi_tabelo_float(9,tabela_float);
+    
+    povprecje(9,tabela_float, tabela2 );
+    nastavi_robne_pogoje(9,tabela2);
+
+    
+    printf("Tabela po povprecenju, in robn. pog. \n");
+    izpisi_tabelo_float(9,tabela2);
 
 	return 0;
 }
