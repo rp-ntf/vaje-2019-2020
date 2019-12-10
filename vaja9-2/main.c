@@ -31,10 +31,26 @@ void vsota_in_razlika(
     *razlika = a-b;
 }
 
+void produkt_in_kvocient(
+    float a, float b,
+    float * prod, float * kvoc )
+{
+    *prod = a*b;
+    *kvoc = a/b;
+}
+
 void zamenjaj_int(
     int * a, int * b )
 {
     int tmp = *a;
+    *a = *b;
+    *b = tmp;
+}
+
+void zamenjaj_float(
+    float * a, float * b )
+{
+    float tmp = *a;
     *a = *b;
     *b = tmp;
 }
