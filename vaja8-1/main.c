@@ -36,10 +36,10 @@ void dodaj_izvor( int n, float tabela[] )
     // na 1/2 tabele dodamo 1.0,
     // na 3/4 tabele dodamo 1.0/3.0
     // na 1/5 tabele dodamo 1.0/7.0
-    /*
+    
     tabela[3*n/4] += 1.0/3.0;
     tabela[n/5] += 1.0/7.0;
-     * */
+    
 }
 
 void nastavi_robne_pogoje( int n, float tabela[] )
@@ -58,6 +58,14 @@ void povprecje( int n,
                        tabela1[i] +
                        tabela1[i+1] );
     }
+}
+
+// Implementiramo hlajenje zaradi okolice po celotni dolzini
+void zunanje_hlajenje( int n,
+    float tabela[], float koef )
+{
+    for( int i=0; i<n; ++i )
+        tabela[i] = (1.0-koef) * tabela[i];
 }
 
 float razlika_tabel( int n,
@@ -170,6 +178,8 @@ int main(int argc, char **argv)
     for( int i=0; i<10000; ++i )
     {
         povprecje(15,tabela1,tabela2);
+        
+        zunanje_hlajenje(15,tabela2,0.1);
 
         nastavi_robne_pogoje(15,tabela2);
         
