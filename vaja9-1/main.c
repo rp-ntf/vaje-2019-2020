@@ -121,5 +121,19 @@ int main(int argc, char **argv)
     izpisi_tabelo_int(tab3,5); // PO SPRSTITVI TABELE TEGA NE POCNEMO VEC !
     */
     
+    // Operatorji ++, --, +=, -= 
+    // na kazalcih povecajo vrednosti za velikost tipa,
+    // na katerega kazalec kaze
+    // (void *) : kazalec genericnega tipa
+    b = tab;
+    int i = 1;
+    printf("i = %d, b = %u, *b = %d\n", i, b, *b);
+    i++;
+    b++;
+    printf("i = %d, b = %u, *b = %d\n", i, b, *b);
+    i += 3;
+    b += 3;
+    printf("i = %d, b = %u, *b = %d\n", i, b, *b);
+
 	return 0;
 }
