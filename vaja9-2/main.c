@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 /* Naloge
  * 
@@ -16,9 +18,24 @@
  * 3. Napisi funkcijo, ki vrne NOVO kopijo obstojece tabele
  * int * nova_tabela_int( int n, int * tab )
  * ( uporablja malloc in memcpy )
+ * 
+ * 
+ * Domaci nalogi:
+ * 
  * 4. Napisi funkcijo, ki vrne NOVO tabelo, 
  * v kateri so samo soda stevila
  * iz prvotne tabele
+ * int * soda_podtabela( int n, int * tab, int * n_sodih )
+ * {
+ * ...
+ *      int * tab2 = malloc( ... )
+ * ...
+ *      return tab2;
+ * }
+ * 5. Napisi funkcijo, ki kot argument prejme n
+ * in vrne NOVO tabelo prvih N elementov fibonacijevega zaporedja
+ * int * fib_zap( int n )
+ * Fn+1 = Fn + Fn-1
  * 
  * 
  */
@@ -55,6 +72,35 @@ void zamenjaj_float(
     *b = tmp;
 }
 
+void izpisi_tabelo_int( int n, int * tab )
+{
+    for( int i=0; i<n; ++i )
+        printf("%d | %d\n", i, tab[i] );
+}
+
+void kopiraj_tabelo_int( int n, int *tab1, int * tab2 )
+{
+    memcpy( tab2, tab1, n*sizeof(int) );
+}
+
+int * nova_tabela_int( int n, int * tab )
+{
+    int * tab2;
+    tab2 = malloc( sizeof(int) * n );
+    memcpy( tab2, tab, sizeof(int) * n );
+    return tab2;
+}
+
+int * soda_podtabela( int n, int * tab, int * n_sodih )
+{
+    int * soda_tab;
+    // 1. prestejemo soda stevila
+    // 2. Alociramo novo tabelo primerne velikosti
+    // 3. Skopiramo vsa soda stevila v novo tabelo
+    // 4. Vrnemo sodo podtabelo
+}
+
+
 int main(int argc, char **argv)
 {
     int x, y;
@@ -69,7 +115,11 @@ int main(int argc, char **argv)
     printf("Zamenjam stevili %d, %d -> ", a, b );
     zamenjaj_int(&a,&b);
     printf("%d, %d", a, b );
-
+    
+    int * tab2;
+    int tab[5] = { 1, 4, 9, 16, 25 };
+    tab2 = nova_tabela_int(5,tab);
+    izpisi_tabelo_int(5,tab2);
     
 	return 0;
 }

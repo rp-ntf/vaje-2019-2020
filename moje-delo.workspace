@@ -59,9 +59,9 @@
   <Project Name="vaja7-4" Path="vaja7-4/vaja7-4.project" Active="No"/>
   <Project Name="vaja7-5" Path="vaja7-5/vaja7-5.project" Active="No"/>
   <Project Name="vaja7-dn" Path="vaja7-dn/vaja7-dn.project" Active="No"/>
-  <Project Name="vaja8-1" Path="vaja8-1/vaja8-1.project" Active="Yes"/>
+  <Project Name="vaja8-1" Path="vaja8-1/vaja8-1.project" Active="No"/>
   <Project Name="vaja9-1" Path="vaja9-1/vaja9-1.project" Active="No"/>
-  <Project Name="vaja9-2" Path="vaja9-2/vaja9-2.project" Active="No"/>
+  <Project Name="vaja9-2" Path="vaja9-2/vaja9-2.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
