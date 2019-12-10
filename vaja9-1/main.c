@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 // Funkcija ki "vrne" 
 // vsoto clenov tabele
@@ -91,6 +92,34 @@ int main(int argc, char **argv)
             i, 
             &tab[i], tab[i], 
             &kazTab[i], kazTab[i] );
+    
+    // Dinamicna alokacija spomina
+    printf("Dinamicno alocirana tabela:\n");
+    int * tab3;
+    // (void *) malloc( st. bytov )
+    // sizeof( tip ) = velikost tipa v bytih
+    tab3 = malloc(sizeof(int)*5);
+    // memcpy( (void *) cilj, (void *) izvor, st. bytov )
+    // enako za memmove (vse te funkcije v stdlib.h
+    memcpy( tab3, tab, sizeof(int) * 3 );
+    printf("Kopiramo samo 3\n");
+    izpisi_tabelo_int(tab3,5);
+    
+    printf("Kopiramo vseh 5\n");
+    memcpy( tab3, tab, sizeof(int) * 5 );
+    izpisi_tabelo_int(tab3,5);
+    
+    for( int i=0; i<5; ++i )
+        printf("%d | %u %d | %u %d\n",
+            i, 
+            &tab[i], tab[i], 
+            &tab3[i], tab3[i] );
+            
+    free(tab3);
+    /*
+    printf("Po sprosceni tab3 : \n");
+    izpisi_tabelo_int(tab3,5); // PO SPRSTITVI TABELE TEGA NE POCNEMO VEC !
+    */
     
 	return 0;
 }
