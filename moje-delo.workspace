@@ -62,7 +62,8 @@
   <Project Name="vaja8-1" Path="vaja8-1/vaja8-1.project" Active="No"/>
   <Project Name="vaja9-1" Path="vaja9-1/vaja9-1.project" Active="No"/>
   <Project Name="vaja9-2" Path="vaja9-2/vaja9-2.project" Active="No"/>
-  <Project Name="vaja10-1" Path="vaja10-1/vaja10-1.project" Active="Yes"/>
+  <Project Name="vaja10-1" Path="vaja10-1/vaja10-1.project" Active="No"/>
+  <Project Name="vaja10-2" Path="vaja10-2/vaja10-2.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -130,6 +131,7 @@
       <Project Name="vaja9-1" ConfigName="Debug"/>
       <Project Name="vaja9-2" ConfigName="Debug"/>
       <Project Name="vaja10-1" ConfigName="Debug"/>
+      <Project Name="vaja10-2" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -197,6 +199,7 @@
       <Project Name="vaja9-1" ConfigName="Release"/>
       <Project Name="vaja9-2" ConfigName="Release"/>
       <Project Name="vaja10-1" ConfigName="Release"/>
+      <Project Name="vaja10-2" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
