@@ -26,6 +26,8 @@
  * 6) Napisite funkcijo, ki iz diska prebere tabelo realnih stevil
  * kot tekst in jih shrani v novo tabelo, ki jo vrne iz funkcije
  *  ( lahko predpostavite da ima tabela manj kot 100 elementov )
+ * 
+ * 
  */
 
 void kvadrati_20( char ime_dat[] )
