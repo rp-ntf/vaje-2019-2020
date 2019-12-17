@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 /*
  * Vaje :
@@ -27,6 +28,14 @@
  * kot tekst in jih shrani v novo tabelo, ki jo vrne iz funkcije
  *  ( lahko predpostavite da ima tabela manj kot 100 elementov )
  * 
+ * 7) Napisite funkcijo, ki presteje vrstice v datoteki
+ * in stevilo izpise na zaslon
+ * 
+ * 8) Napisite funkcijo, ki shrani tabelo realnih stevil v datoteko
+ * tako, da najprej zapise dolzino tabele kot celo stevilo
+ * potem pa se vse elemente tabele
+ * 9) Napisite funkcijio, ki prebere tabelo iz (8) iz diska
+ * in vrne novo tabelo 
  * 
  */
 
@@ -57,6 +66,41 @@ void preberi_10_int( char ime_dat[], int tab[] )
     fclose(f);
 }
 
+void zapisi_sinx( char ime_dat[] )
+{
+    FILE * f = fopen(ime_dat, "wb");
+    for( float x = 0.0; x < 7.001; x += 0.05 )
+        fprintf(f,"%f\t%f\n", x, sin(x) );
+    fclose(f);
+}
+
+void zapisi_float_txt( char ime_dat[], 
+    float tab[], int n )
+{
+    FILE * f = fopen(ime_dat, "wb");
+    for( int i=0; i<n; ++i )
+        fprintf(f, "%f\n", tab[i] );
+    fclose(f);
+}
+
+float * preberi_float_txt( 
+    char ime_dat[],
+    int * n )
+{
+    float * tab = malloc( sizeof(float) * 100 );
+    FILE * f = fopen( ime_dat, "rb" );
+    *n = 0;
+    while( !feof( f ) )
+    {
+        fscanf( f, "%f",&tab[*n] );
+        *n += 1;
+    }
+    *n -= 1;
+    
+    fclose(f);
+    return tab;
+}
+
 int main(int argc, char **argv)
 {
     kvadrati_20("kvadrati20.txt");
@@ -69,5 +113,21 @@ int main(int argc, char **argv)
     for( int i=0; i<10; ++i )
         printf("%d\t%d\n", tab1[i], tab2[i] );
 	
+    zapisi_sinx("sinx.dat");
+    
+    float tab_float[] = { 1, 2, 3.14142 };
+    zapisi_float_txt( "floattxt.dat", tab_float, 3 );
+    
+    float * tab_f_prebran;
+    int n;
+    tab_f_prebran = preberi_float_txt("floattxt.dat", &n );
+    
+    printf("Prebrali smo tabelo float dolzine %d\n", n );
+    for( int i=0; i<n; ++i )
+        printf("%d | %f\n", i, tab_f_prebran[i] );
+    
+    free( tab_f_prebran );
+    tab_f_prebran = NULL;
+    
 	return 0;
 }
