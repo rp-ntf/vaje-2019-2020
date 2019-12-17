@@ -37,6 +37,33 @@
  * 9) Napisite funkcijio, ki prebere tabelo iz (8) iz diska
  * in vrne novo tabelo 
  * 
+ * 10) Napisite funkcijo, ki spoji dve datoteki
+ * tako, da 2. datoteka sledi 1. datoteki
+ * 
+ * 11) Napisite funkcijo, ki spoji dve datoteki tako,
+ * da v vsaki vrstici najprej pride tekst iz 1. datoteke in potem tekst iz 2. datoteke
+ * vmes pa je \t. Ce je ena datoteka daljsa kot druga,
+ * njen preostanek obravnavamo kot prazne vrstice (vrstice,
+ * ki so enake "")
+ * 
+ * dat1: 
+ * abc
+ * def
+ * 
+ * dat2:
+ * ghi
+ * jkl
+ * 
+ * skupaj (naloga 10):
+ * abc
+ * def
+ * ghi
+ * jkl
+ * 
+ * skupaj (naloga 11):
+ * abc ghi
+ * def jkl
+ * 
  */
 
 void kvadrati_20( char ime_dat[] )
