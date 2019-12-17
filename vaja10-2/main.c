@@ -32,6 +32,7 @@
  * in stevilo izpise na zaslon
  * 
  * 8) Napisite funkcijo, ki shrani tabelo realnih stevil v datoteko
+ * (kot tekst)
  * tako, da najprej zapise dolzino tabele kot celo stevilo
  * potem pa se vse elemente tabele
  * 9) Napisite funkcijio, ki prebere tabelo iz (8) iz diska
@@ -63,6 +64,8 @@
  * skupaj (naloga 11):
  * abc ghi
  * def jkl
+ * 
+ * Domaca naloga : naloge 7, 8 in 9
  * 
  */
 
