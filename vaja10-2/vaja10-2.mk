@@ -5,17 +5,17 @@
 ## Debug
 ProjectName            :=vaja10-2
 ConfigurationName      :=Debug
-WorkspacePath          := "/home/matjaz/doktorat/workspace/vaje-rp/vaje-2019-2020"
-ProjectPath            := "/home/matjaz/doktorat/workspace/vaje-rp/vaje-2019-2020/vaja10-2"
+WorkspacePath          :=/home/rp/racunalniski-praktikum/moje-delo
+ProjectPath            :=/home/rp/racunalniski-praktikum/moje-delo/vaja10-2
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
-User                   :=matjaz
-Date                   :=17/12/19
-CodeLitePath           :="/home/matjaz/.codelite"
-LinkerName             :=/usr/bin/g++ -lm
+User                   :=rp
+Date                   :=07/01/20
+CodeLitePath           :=/home/rp/.codelite
+LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
 ObjectSuffix           :=.o
 DependSuffix           :=.o.d
@@ -92,12 +92,12 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/main.c$(ObjectSuffix): main.c $(IntermediateDirectory)/main.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "/home/matjaz/doktorat/workspace/vaje-rp/vaje-2019-2020/vaja10-2/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
+	$(CC) $(SourceSwitch) "/home/rp/racunalniski-praktikum/moje-delo/vaja10-2/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.c$(DependSuffix): main.c
-	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.c$(ObjectSuffix) -MF$(IntermediateDirectory)/main.c$(DependSuffix) -MM "main.c"
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.c$(ObjectSuffix) -MF$(IntermediateDirectory)/main.c$(DependSuffix) -MM main.c
 
 $(IntermediateDirectory)/main.c$(PreprocessSuffix): main.c
-	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.c$(PreprocessSuffix) "main.c"
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.c$(PreprocessSuffix) main.c
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
