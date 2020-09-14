@@ -13,7 +13,16 @@ fi
 cd "$folder"
 
 echo "### Prevajam program..."
-gcc -o replrun *.c
+if [[ -e 'main.c' ]]
+then
+  gcc -o replrun *.c -lm
+elif [[ -e 'main.cpp' ]]
+then
+  g++ -o replrun *.cpp -lm
+else
+  echo "Ustrezna koda ne obstaja, koncujem"
+  exit 1
+fi
 echo "### Prevedeno"
 
 echo "### Zaganjam program"
